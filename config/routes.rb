@@ -2,12 +2,22 @@ Rails.application.routes.draw do
   
 
 
+  resources :analytics
   resources :customers
   get 'home2/index'
 
   get 'home1/index'
 
   get 'home1/about'
+  
+  get '/graphs' =>'analytics#graphs'
+  
+  
+  get '/proteinC' =>'analytics#proteinCalc'
+  
+  
+  #validate that a number is even
+  post '/validate', :controller=>'analytics', :action=>'proteinCounter'
 
   get 'home1/contactUs'
 
