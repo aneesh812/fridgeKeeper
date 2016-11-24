@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   
 
 
+  resources :customersps do
+      resources :foodsps
+end
+
+
   resources :analytics
   resources :customers
   get 'home2/index'
