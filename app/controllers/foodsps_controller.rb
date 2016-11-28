@@ -1,3 +1,5 @@
+
+require 'sp_logger'
 class FoodspsController < ApplicationController
   before_action :set_foodsp, only: [:show, :edit, :update, :destroy]
 
@@ -34,6 +36,12 @@ class FoodspsController < ApplicationController
 # Customersp will be associated with the foodsp
 @foodsp = @customersp.foodsps.build(params.require(:foodsp).permit(
 :productsp, :pricesp, :expirysp, :caloriessp, :proteinssp, :sugarsp, :fatsp))
+logger = SpLogger.instance
+logger.logInformation(" A new food is added:" + @foodsp.productsp)
+
+
+
+
 if @foodsp.save
 # Save the foodsp successfully
 redirect_to customersp_foodsp_url(@customersp, @foodsp)

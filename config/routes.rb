@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
 
+  resources :basics
   resources :customersps do
       resources :foodsps
 end

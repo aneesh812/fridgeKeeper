@@ -1,0 +1,55 @@
+<%= form_for(@basic) do |f| %>
+  <% if @basic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@basic.errors.count, "error") %> prohibited this basic from being saved:</h2>
+
+      <ul>
+      <% @basic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Product %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :Calories %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :sugar %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :proteins %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :carb %><br>
+    <%= f.text_field :color %>
+  </div>
+
+<div class="field">
+Milk :
+<%= check_box_tag 'basic[windows]', 'windows' %>
+</div>
+<div class="field">
+Egg :
+<%= check_box_tag 'basic[mirror]', 'mirror' %>
+</div>
+<div class="field">
+Bread :
+<%= check_box_tag 'basic[psensor]', 'psensor' %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

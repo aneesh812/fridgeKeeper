@@ -1,3 +1,4 @@
+require 'sp_logger'
 class CustomerspsController < ApplicationController
   before_action :set_customersp, only: [:show, :edit, :update, :destroy]
 
@@ -25,6 +26,9 @@ class CustomerspsController < ApplicationController
   # POST /customersps.json
   def create
     @customersp = Customersp.new(customersp_params)
+
+    logger = SpLogger.instance
+    logger.logInformation(" A new customer is added:" + @customersp.namesp)
 
     respond_to do |format|
       if @customersp.save
