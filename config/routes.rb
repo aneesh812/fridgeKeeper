@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  
+  #Vinayak
 
+  root to: "payments#index"
+  resources :payments, only: [:index, :new, :create]
+#Vinayak
+  get 'payments/index'
+
+  get 'payments/new'
+
+  get 'payments/create'
 
   resources :customersps do
       resources :foodsps
