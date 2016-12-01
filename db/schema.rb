@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123203951) do
+ActiveRecord::Schema.define(version: 20161201195044) do
 
   create_table "analytics", force: :cascade do |t|
     t.string   "Food"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 20161123203951) do
   end
 
   add_index "foodsps", ["customersp_id"], name: "index_foodsps_on_customersp_id"
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "last4"
+    t.decimal  "amount"
+    t.boolean  "success"
+    t.string   "authorization_code"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
