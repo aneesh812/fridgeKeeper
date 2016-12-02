@@ -4,7 +4,7 @@ class AnalyticTest < ActiveSupport::TestCase
    test "the truth" do
      assert true
    end
-end
+
 
 
  test "must not save a analytic when foodname day protein carb fats calorie and country
@@ -29,4 +29,6 @@ analytic = Analytic.new(Food: "John",
 Day: "Monday1" ,Protein: "Jo" , Carbohydrates: "xss" , Fats: "sad" , Calories: "qwwq" , Country: "India121")
 assert_equal(false, analytic.save, "saved the analytic even
 though name contains non-letters!")
+end
+
 end

@@ -4,10 +4,10 @@ one:
   namesp: MyString
   surnamesp: MyString
   emailsp: MyString
-  phonesp: MyString
+  phonesp: 1234
 
 two:
   namesp: MyString
   surnamesp: MyString
   emailsp: MyString
-  phonesp: MyString
+  phonesp: 1234

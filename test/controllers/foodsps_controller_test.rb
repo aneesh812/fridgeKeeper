@@ -2,18 +2,22 @@ require 'test_helper'
 
 class FoodspsControllerTest < ActionController::TestCase
   setup do
-    @foodsp = foodsps(:one)
+@customersp = customersps(:one)
+@foodsp = @customersp.foodsps.first
   end
 
   test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:foodsps)
-  end
+    get :index, { :customersp_id => @customersp}
+assert_response :success
+assert_not_nil assigns(:foodsps)
+end
+
+  
 
   test "should get new" do
-    get :new
-    assert_response :success
+    get :new, { :customersp_id => @customersp}
+assert_response :success
+assert_not_nil assigns(:foodsp)
   end
 
   test "should create foodsp" do

@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    BMRcal (0.0.0)
+    FatIntakeSP (0.0.0)
     actionmailer (4.2.5)
       actionpack (= 4.2.5)
       actionview (= 4.2.5)
@@ -118,6 +120,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
     rails_layout (1.0.34)
     railties (4.2.5)
       actionpack (= 4.2.5)
@@ -171,6 +175,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  BMRcal (~> 0.0.0)
+  FatIntakeSP (~> 0.0.0)
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
   byebug
@@ -181,6 +187,7 @@ DEPENDENCIES
   minitest-reporters
   proteinCalculator
   rails (= 4.2.5)
+  rails-observers (~> 0.1.2)
   rails_layout
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

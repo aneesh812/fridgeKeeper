@@ -2,11 +2,16 @@ Rails.application.routes.draw do
   
 
 
-  resources :basics
+  resources :needs
   resources :customersps do
       resources :foodsps
 end
 
+
+get '/fat' =>'fatintake#checkFatIntakeSP'
+
+
+post '/validate1' =>'fatintake#isFatCal'
 
   resources :analytics
   resources :customers

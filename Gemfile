@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'BMRcal', '~> 0.0.0'
+
+gem 'FatIntakeSP', '~> 0.0.0'
+
+gem 'rails-observers', '~> 0.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

@@ -1,6 +1,6 @@
-class CreateBasics < ActiveRecord::Migration
+class CreateNeeds < ActiveRecord::Migration
   def change
-    create_table :basics do |t|
+    create_table :needs do |t|
       t.string :firstname
       t.string :lastname
       t.string :manufacturer

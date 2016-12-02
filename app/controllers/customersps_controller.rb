@@ -13,6 +13,8 @@ class CustomerspsController < ApplicationController
   def show
   end
 
+
+
   # GET /customersps/new
   def new
     @customersp = Customersp.new
@@ -27,8 +29,9 @@ class CustomerspsController < ApplicationController
   def create
     @customersp = Customersp.new(customersp_params)
 
-    logger = SpLogger.instance
-    logger.logInformation(" A new customer is added:" + @customersp.namesp)
+    # retrieve the instance/object of the MyLogger class
+logger = SpLogger.instance
+logger.logInformation("A new Customer requested: " + @customersp.namesp + @customersp.surnamesp + @customersp.emailsp + @customersp.phonesp)
 
     respond_to do |format|
       if @customersp.save

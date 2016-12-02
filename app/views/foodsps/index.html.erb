@@ -37,7 +37,24 @@
   </tbody>
 </table>
 
+<h3>Total Number of Products: </h3> 
+<h3> <%= Foodsp.where(:customersp_id =>['3']).count(:productsp) %> </h3>
+
+
+<h3>Total Proteins Intake: </h3>
+<h3> <%= Foodsp.where(:customersp_id =>['3']).sum(:proteinssp) %> </h3>
+<h3> <%= @prot1 %></h3>
+
+
+<h3>Total Fats Intake: </h3>
+<h3> <%= Foodsp.where(:customersp_id =>['3']).sum(:fatsp) %> </h3>
+
+<h3>Total Calories Intake: </h3>
+<h3> <%= Foodsp.where(:customersp_id =>['3']).sum(:caloriessp) %> </h3>
+
+
 <br>
+<h1><%= link_to 'Click to calculate fat intake', fat_url %></h1>
 
 <%= link_to 'New food', new_customersp_foodsp_path(@customersp) %>
    <%= link_to 'Back to Customer', @customersp %>
