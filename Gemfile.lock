@@ -23,11 +23,6 @@ GEM
     activejob (4.2.5)
       activesupport (= 4.2.5)
       globalid (>= 0.3.0)
-    activemerchant (1.46.0)
-      activesupport (>= 3.2.14, < 5.0.0)
-      builder (>= 2.1.2, < 4.0.0)
-      i18n (>= 0.6.9)
-      nokogiri (~> 1.4)
     activemodel (4.2.5)
       activesupport (= 4.2.5)
       builder (~> 3.1)
@@ -99,7 +94,6 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
-    pg (0.19.0)
     pkg-config (1.1.7)
     proteinCalculator (0.4.0)
     rack (1.6.4)
@@ -177,7 +171,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemerchant (~> 1.46.0)
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
   byebug
@@ -186,7 +179,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   minitest-reporters
-  pg
   proteinCalculator
   rails (= 4.2.5)
   rails_layout
