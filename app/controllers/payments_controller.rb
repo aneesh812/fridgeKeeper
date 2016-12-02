@@ -1,4 +1,4 @@
-require 'my_logger'
+#require 'my_logger'
 class PaymentsController < ApplicationController
   def index
     @payments = Payment.all
@@ -12,8 +12,8 @@ class PaymentsController < ApplicationController
     @payment = Payment.new(payment_params)
 
 # retrieve the instance/object of the MyLogger class
-logger = MyLogger.instance
-logger.logInformation("A new payment requested: " + @payment.first_name +  @payment.last_name)
+#logger = MyLogger.instance
+#logger.logInformation("A new payment requested: " + @payment.first_name +  @payment.last_name)
 
 
     if @payment.save

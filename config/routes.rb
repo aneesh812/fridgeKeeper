@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   #Vinayak
 
-  root to: "payments#index"
   resources :payments, only: [:index, :new, :create]
 #Vinayak
   get 'payments/index'
@@ -37,6 +36,7 @@ end
   get 'home1/findUs'
 
   devise_for :users
+
   root :to => 'home1#index'
   
   get 'home/index'
