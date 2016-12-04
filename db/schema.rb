@@ -33,6 +33,41 @@ ActiveRecord::Schema.define(version: 20161204112732) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "customersps", force: :cascade do |t|
+    t.string   "namesp"
+    t.string   "surnamesp"
+    t.string   "emailsp"
+    t.string   "phonesp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foodsps", force: :cascade do |t|
+    t.string   "productsp"
+    t.string   "pricesp"
+    t.string   "expirysp"
+    t.string   "caloriessp"
+    t.string   "proteinssp"
+    t.string   "sugarsp"
+    t.string   "fatsp"
+    t.integer  "customersp_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "foodsps", ["customersp_id"], name: "index_foodsps_on_customersp_id"
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "last4"
+    t.decimal  "amount"
+    t.boolean  "success"
+    t.string   "authorization_code"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"

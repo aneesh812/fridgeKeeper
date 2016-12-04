@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  
+  #Vinayak
+
+  resources :payments, only: [:index, :new, :create]
+#Vinayak
+  get 'payments/index'
+
+  get 'payments/new'
+
+  get 'payments/create'
+
+  resources :customersps do
+      resources :foodsps
+end
 
 
   resources :shakes
@@ -28,6 +40,7 @@ Rails.application.routes.draw do
   get 'home1/findUs'
 
   devise_for :users
+
   root :to => 'home1#index'
   
   get 'home/index'

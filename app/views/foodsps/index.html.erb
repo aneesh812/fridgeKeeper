@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing all your products: </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Expiry</th>
+      <th>Calories</th>
+      <th>Proteins</th>
+      <th>Sugar</th>
+      <th>Fat</th>
+      <th>Customer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foodsps.each do |foodsp| %>
+      <tr>
+        <td><%= foodsp.productsp %></td>
+        <td><%= foodsp.pricesp %></td>
+        <td><%= foodsp.expirysp %></td>
+        <td><%= foodsp.caloriessp %></td>
+        <td><%= foodsp.proteinssp %></td>
+        <td><%= foodsp.sugarsp %></td>
+        <td><%= foodsp.fatsp %></td>
+        <td><%= foodsp.customersp_id%></td>
+        <td><%= link_to 'Show', customersp_foodsp_path(@customersp, foodsp) %></td>
+        <td><%= link_to 'Edit', edit_customersp_foodsp_path(@customersp, foodsp) %></td>
+        <td><%= link_to 'Destroy', customersp_foodsp_path(@customersp, foodsp), method: :delete,data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New food', new_customersp_foodsp_path(@customersp) %>
+   <%= link_to 'Back to Customer', @customersp %>
