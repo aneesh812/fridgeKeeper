@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
 
 
+  resources :shakes
+  resources :profiles
   resources :analytics
   resources :customers
   get 'home2/index'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   get 'home1/about'
   
   get '/graphs' =>'analytics#graphs'
+  
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   
   
   get '/proteinC' =>'analytics#proteinCalc'
