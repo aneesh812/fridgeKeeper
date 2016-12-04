@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    BMRcal (0.0.0)
+    FatIntakeSP (0.0.0)
     actionmailer (4.2.5)
       actionpack (= 4.2.5)
       actionview (= 4.2.5)
@@ -99,7 +101,6 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
-    pg (0.19.0)
     pkg-config (1.1.7)
     proteinCalculator (0.4.0)
     rack (1.6.4)
@@ -179,6 +180,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  BMRcal (~> 0.0.0)
+  FatIntakeSP (~> 0.0.0)
   activemerchant (~> 1.46.0)
   autoprefixer-rails
   bootstrap-sass (~> 3.2.0)
@@ -188,10 +191,9 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   minitest-reporters
-  pg
   proteinCalculator
   rails (= 4.2.5)
-  rails-observers
+  rails-observers (~> 0.1.2)
   rails_layout
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
