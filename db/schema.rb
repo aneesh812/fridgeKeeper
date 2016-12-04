@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204112732) do
+ActiveRecord::Schema.define(version: 20161204174822) do
 
   create_table "analytics", force: :cascade do |t|
     t.string   "Food"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 20161204112732) do
   end
 
   add_index "foodsps", ["customersp_id"], name: "index_foodsps_on_customersp_id"
+
+  create_table "needs", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "manufacturer"
+    t.decimal  "cost"
+    t.string   "description"
+    t.string   "color"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "payments", force: :cascade do |t|
     t.string   "first_name"

@@ -8,7 +8,7 @@ one:
   proteinssp: MyString
   sugarsp: MyString
   fatsp: MyString
-  customersp_id: 
+  customersp: one
 
 two:
   productsp: MyString
@@ -18,4 +18,46 @@ two:
   proteinssp: MyString
   sugarsp: MyString
   fatsp: MyString
+  customersp: one
+
+three:
+  productsp: MyString
+  pricesp: MyString
+  expirysp: MyString
+  caloriessp: MyString
+  proteinssp: MyString
+  sugarsp: MyString
+  fatsp: MyString
+  customersp: two 
+
+
+four:
+  productsp: MyString
+  pricesp: MyString
+  expirysp: MyString
+  caloriessp: MyString
+  proteinssp: MyString
+  sugarsp: MyString
+  fatsp: MyString
+  customersp: two 
+
+five:
+  productsp: MyString
+  pricesp: MyString
+  expirysp: MyString
+  caloriessp: MyString
+  proteinssp: MyString
+  sugarsp: MyString
+  fatsp: MyString
+  customersp: two
+
+six:
+  productsp: MyString
+  pricesp: MyString
+  expirysp: MyString
+  caloriessp: MyString
+  proteinssp: MyString
+  sugarsp: MyString
+  fatsp: MyString
   customersp_id: 
+

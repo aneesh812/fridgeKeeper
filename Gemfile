@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+#by shuaib
+gem 'BMRcal', '~> 0.0.0'
+#by shuaib
+gem 'FatIntakeSP', '~> 0.0.0'
+#by shuaib
+gem 'rails-observers', '~> 0.1.2'
+
 gem 'activemerchant', '~> 1.46.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -22,7 +29,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
-gem 'rails-observers'
+#gem 'rails-observers'
 
 gem 'proteinCalculator'
 
