@@ -1,24 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Case</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
 
-<div class="container">
-  <h3>Menu</h3>
-  <ul class="nav nav-pills nav-stacked">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Shopping Cart </a></li>
-    <li><a href="analytics_path">Food History</a></li>
-    <li><a href="analytics_graphs_path">Food Analytics</a></li>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html{
+  height: 100%;
+  background:radial-gradient( transparent, rgba(0, 40, 50, 1)), url('https://img.clipartfest.com/b829c50ea79d6b6a792258cdd067ae25_do-you-think-healthy-food-healthy-food-clipart_2000-1689.jpeg');
+background-size: 60%;
+}
+
+nav ul{
+  text-align:center;
+
+}
+nav ul lii{
+  display: inline-block;  
+  
+}
+
+nav ul lii a{
+  font-family:"Open Sans";
+  color: rgba(0, 35, 34, 0.6);
+  font-size: 15px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+lii a{
+  background:rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0;1), inset  0 0 1px rgba(225, 255, 255, 0.8);
+  width:120px;
+  height:120px;
+  line-height:115px;
+  border-radius: 50%;
+  display:block;
+}
+
+lii a:hover{
+  transition-duration: 300ms;
+
+  background: rgba(0, 120, 140, 0.6);
+}
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<nav>
+  <ul>
+    <lii><a href="#">Analytics</a></lii>
+    <lii><a href="#">Shopping</a></lii>
+    <lii><a href="#">Calculators</a></lii>
+    <lii><a href="#">History</a></lii>
+    <lii><a href="#">History</a></lii>
   </ul>
-</div>
+</nav>
 
 </body>
+
+
+
+
 </html>
