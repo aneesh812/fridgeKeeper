@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  
   #Vinayak
-
-  resources :payments, only: [:index, :new, :create]
+resources :payments, only: [:index, :new, :create]
 #Vinayak
   get 'payments/index'
 
@@ -9,11 +9,18 @@ Rails.application.routes.draw do
 
   get 'payments/create'
 
+#shuaib
+  resources :needs
   resources :customersps do
       resources :foodsps
 end
 
+get '/fat' =>'fatintake#checkFatIntakeSP'
+post '/validate1' =>'fatintake#isFatCal'
 
+
+  resources :shakes
+  resources :profiles
   resources :analytics
   resources :customers
   get 'home2/index'
@@ -23,6 +30,8 @@ end
   get 'home1/about'
   
   get '/graphs' =>'analytics#graphs'
+  
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   
   
   get '/proteinC' =>'analytics#proteinCalc'

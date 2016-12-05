@@ -1,3 +1,5 @@
+
+require 'sp_logger'
 class FoodspsController < ApplicationController
   before_action :set_foodsp, only: [:show, :edit, :update, :destroy]
 
@@ -11,6 +13,8 @@ class FoodspsController < ApplicationController
 @foodsps = @customersp.foodsps
   end
 
+
+
   # GET /customersps/1/foodsps/2
   def show
     @customersp = Customersp.find(params[:customersp_id])
@@ -19,11 +23,14 @@ class FoodspsController < ApplicationController
 @foodsp = @customersp.foodsps.find(params[:id])
   end
 
+  
+
   # GET /customersps/1/foodsps/new
   def new
 @customersp = Customersp.find(params[:customersp_id])
 # Associate an order object with customersp 1
 @foodsp = @customersp.foodsps.build
+
   end
 
 # POST /customersps/1/foodsps 
@@ -34,12 +41,18 @@ class FoodspsController < ApplicationController
 # Customersp will be associated with the foodsp
 @foodsp = @customersp.foodsps.build(params.require(:foodsp).permit(
 :productsp, :pricesp, :expirysp, :caloriessp, :proteinssp, :sugarsp, :fatsp))
+
+logger = SpLogger.instance
+logger.logInformation(" A new food is added:" + @foodsp.productsp + @foodsp.pricesp + @foodsp.expirysp)
+
+
 if @foodsp.save
 # Save the foodsp successfully
 redirect_to customersp_foodsp_url(@customersp, @foodsp)
 else
 render :action => "new"
 end
+
 end
 
 # GET /customersps/1/foodsps/2/edit

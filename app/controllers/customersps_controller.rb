@@ -1,3 +1,4 @@
+require 'sp_logger'
 class CustomerspsController < ApplicationController
   before_action :set_customersp, only: [:show, :edit, :update, :destroy]
 
@@ -12,6 +13,8 @@ class CustomerspsController < ApplicationController
   def show
   end
 
+
+
   # GET /customersps/new
   def new
     @customersp = Customersp.new
@@ -25,6 +28,10 @@ class CustomerspsController < ApplicationController
   # POST /customersps.json
   def create
     @customersp = Customersp.new(customersp_params)
+
+    # retrieve the instance/object of the MyLogger class
+logger = SpLogger.instance
+logger.logInformation("A new Customer requested: " + @customersp.namesp + @customersp.surnamesp + @customersp.emailsp + @customersp.phonesp)
 
     respond_to do |format|
       if @customersp.save

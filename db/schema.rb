@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201195044) do
+ActiveRecord::Schema.define(version: 20161204174822) do
 
   create_table "analytics", force: :cascade do |t|
     t.string   "Food"
@@ -57,6 +57,17 @@ ActiveRecord::Schema.define(version: 20161201195044) do
 
   add_index "foodsps", ["customersp_id"], name: "index_foodsps_on_customersp_id"
 
+  create_table "needs", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "manufacturer"
+    t.decimal  "cost"
+    t.string   "description"
+    t.string   "color"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "payments", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -66,6 +77,26 @@ ActiveRecord::Schema.define(version: 20161201195044) do
     t.string   "authorization_code"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "address"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "shakes", force: :cascade do |t|
+    t.string   "Name"
+    t.decimal  "Cost"
+    t.decimal  "Calories"
+    t.text     "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

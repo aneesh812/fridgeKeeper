@@ -28,16 +28,16 @@ class Payment < ActiveRecord::Base
   end
 
   def valid_card
-  if !credit_card.valid?
+  if credit_card.valid?
         errors.add(:base, "Credited Successfully")
       false
     else
       true
     end
 end
-
+  
   def process
-    if valid_card
+    if !valid_card
       response = GATEWAY.authorize(amount * 100, credit_card)
       if response.success?
         transaction = GATEWAY.capture(amount * 100, response.authorization)

@@ -9,11 +9,7 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    @payment = Payment.new(payment_params)
-
-# retrieve the instance/object of the MyLogger class
-#logger = MyLogger.instance
-#logger.logInformation("A new payment requested: " + @payment.first_name +  @payment.last_name)
+    @payment = Payment.new(payment_params) 
 
 
     if @payment.save
@@ -21,7 +17,7 @@ class PaymentsController < ApplicationController
         redirect_to payments_path, notice: "The user has been successfully charged." and return
       end
     end
-    render 'new'
+    render 'create'
   end
 
 private
