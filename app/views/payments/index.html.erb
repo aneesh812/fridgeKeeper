@@ -1,12 +1,14 @@
-<h1>Payment Attempts</h1>
 <div class="well">
-<%= link_to "New Payment", payments_new_path, class: "btn btn-primary" %>
+<center><%= link_to "New Checkout", payments_new_path, class: "btn btn-primary" %></center>
 </div>
 <% if !flash[:notice].blank? %>
   <div class="alert alert-success">
     <%= flash[:notice] %>
   </div>
 <% end %>
+<body background="">
+
+
 <table class="table table-bordered table-striped">
   <tr>
     <th>First Name</th>
@@ -24,7 +26,7 @@
         <td><%= payment.last4 %>****</td>
         <td><%= number_to_currency payment.amount %></td>
         <td><%= payment.success == true ? "Yes" : "Yes" %></td>
-        <td><%= payment.authorization_code %>Created Successfully</td>
+        <td><%= payment.authorization_code %>Paid Successfully</td>
       </tr>
     <% end %>
   <% else %>

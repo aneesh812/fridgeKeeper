@@ -1,5 +1,33 @@
 Rails.application.routes.draw do
   
+  get 'homevd/index'
+
+  get 'home/index'
+
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
+  get 'products/index'
+
+#Vinayak
+
+
+  resources :foods
+
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
+ # root to: "homevd#index"
+
+
+
+
+
   #Vinayak
 resources :payments, only: [:index, :new, :create]
 #Vinayak
