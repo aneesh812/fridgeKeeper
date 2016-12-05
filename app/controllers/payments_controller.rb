@@ -1,4 +1,4 @@
-#require 'my_logger'
+require 'vd_logger'
 class PaymentsController < ApplicationController
   def index
     @payments = Payment.all
@@ -10,7 +10,8 @@ class PaymentsController < ApplicationController
 
   def create
     @payment = Payment.new(payment_params) 
-
+    logger = VdLogger.instance
+    logger.logInformation("A new payment requested: " + @payment.inspect)
 
     if @payment.save
       if @payment.process
