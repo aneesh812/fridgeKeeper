@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :reviews
   get 'homevd/index'
 
   get 'home/index'
@@ -15,7 +16,9 @@ Rails.application.routes.draw do
   get 'products/index'
 
 #Vinayak
+  get 'payments/searchingName'
 
+  post 'validate3',  :controller=>'payments', :action=>'results' 
 
   resources :foods
 
