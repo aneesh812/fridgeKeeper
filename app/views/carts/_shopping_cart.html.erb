@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body background="http://www.magic4walls.com/wp-content/uploads/2013/11/food-berry-cherry-cherry-background-wallpaper-widescreen-fullscreen-widescreen-HD-wallpapers-background-wallpaper-widescreen-fullscreen-widescreen.jpg">
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Online Grocery Store</h1>
+    
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><font color="white">FridgeKeeper</font></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:3000/"><font color="Red">Home</font></a></li>
+        <li><a href="http://localhost:3000/products"><font color="Red">Products</font></a></li>
+        <li><a href="#"><font color="Red">Deals</font></a></li>
+        <li><a href="#"><font color="Red">Stores</font></a></li>
+        <li><a href="#"><font color="Red">Contact</font></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:3000/users/sign_in"><span class="glyphicon glyphicon-user"></span><font color="Red"> Your Account</font></a></li>
+        <li><a href="http://localhost:3000/cart/"><span class="glyphicon glyphicon-shopping-cart"></span><font color="Red"> Cart</font></a></li>
+        <li><a href="http://localhost:3000/payments"><span class="glyphicon glyphicon-phone"></span><span class="glyphicon glyphicon-euro-shopping-cart"></span><font color="Red"> Payment</font></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<% if !@order_item.nil? && @order_item.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+    <% @order_item.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if @order_items.size == 0 %>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+  <p class="text-center">
+   <center><font color="darkgray"><h1>No items in your shopping cart.</br> Please go back and add some items to your cart</h1>
+  </font></center></p>
+
+</br>
+</br>
+</br>
+</br>
+
+    <center>
+      <a href="http://localhost:3000/products" class="btn btn-primary"><font color="Red">Back</font></a>
+    </center>
+  
+<% else %>
+  <% @order_items.each do |order_item| %>
+    <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+  <% end %>
+<% end %>

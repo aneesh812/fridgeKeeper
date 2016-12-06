@@ -17,6 +17,7 @@ group :development do
 
 end  
 
+gem 'currencyConv','~> 0.0.0'
 
 group :production do
 	gem 'pg'
