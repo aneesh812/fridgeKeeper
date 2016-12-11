@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :donations
+  get 'donation/index'
   resources :reviews
   get 'homevd/index'
 

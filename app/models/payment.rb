@@ -6,6 +6,10 @@ class Payment < ActiveRecord::Base
   attr_accessor :expiration_month
   attr_accessor :expiration_year
 
+has_many :orders
+validates :first_name, :last_name, :card_security_code, :credit_card_number, :amount, presence: true
+
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :card_security_code, presence: true

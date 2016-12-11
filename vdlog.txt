@@ -15,3 +15,11 @@ A new payment requested: #<Payment id: nil, first_name: "sfjkhsdfjkh", last_name
 A new payment requested: #<Payment id: nil, first_name: "sfjkhsdfjkh", last_name: "sdjkhfskdjfh", last4: nil, amount: #<BigDecimal:7ff76154a5a0,'0.8E3',9(18)>, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
 A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
 A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "Vinayak", last_name: "dhole", last4: nil, amount: #<BigDecimal:7ff022341b00,'0.1E3',9(18)>, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "vinayak ", last_name: "dhole1", last4: nil, amount: #<BigDecimal:7f91ba659818,'0.8E3',9(18)>, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
