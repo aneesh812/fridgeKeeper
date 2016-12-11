@@ -1,43 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
+
+
+
 <body background="http://www.magic4walls.com/wp-content/uploads/2013/11/food-berry-cherry-cherry-background-wallpaper-widescreen-fullscreen-widescreen-HD-wallpapers-background-wallpaper-widescreen-fullscreen-widescreen.jpg">
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Online Grocery Store</h1>
-    
-  </div>
-</div>
+    <button type="button" class="btn btn-primary btn-lg">
+  
+   <a <%= link_to 'Products', products_url %>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><font color="white">FridgeKeeper</font></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost:3000/"><font color="Red">Home</font></a></li>
-        <li><a href="http://localhost:3000/products"><font color="Red">Products</font></a></li>
-        <li><a href="#"><font color="Red">Deals</font></a></li>
-        <li><a href="#"><font color="Red">Stores</font></a></li>
-        <li><a href="#"><font color="Red">Contact</font></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://localhost:3000/users/sign_in"><span class="glyphicon glyphicon-user"></span><font color="Red"> Your Account</font></a></li>
-        <li><a href="http://localhost:3000/cart/"><span class="glyphicon glyphicon-shopping-cart"></span><font color="Red"> Cart</font></a></li>
-        <li><a href="http://localhost:3000/payments"><span class="glyphicon glyphicon-phone"></span><span class="glyphicon glyphicon-euro-shopping-cart"></span><font color="Red"> Payment</font></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<span class="glyphicon glyphicon-plus"></span> 
+</button>
+     </a>
+<button type="button" class="btn btn-primary btn-lg">
+ <a <%= link_to 'Payments', payments_url %>
+
+<span class="glyphicon glyphicon-phone"></span>
+
+     </a>
+</button>
 
 
+     
 
 
 
@@ -67,7 +49,7 @@
 </br>
 
     <center>
-      <a href="http://localhost:3000/products" class="btn btn-primary"><font color="Red">Back</font></a>
+      <a <%= link_to 'Back', products_url %></a>
     </center>
   
 <% else %>

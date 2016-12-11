@@ -113,3 +113,5 @@ has been updated. cost 30.0
 Meat 78
 has been updated. cost 30.0
 ##############################
+A new Customer requested: ShuaibPatelshuaib.a.patel@gmail.com0892213554
+ A new food is added:Apple212/01/2017

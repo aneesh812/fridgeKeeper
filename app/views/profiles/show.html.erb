@@ -298,56 +298,98 @@ body  {
   </div>
   <div class="icons">
     <div class="rotater">
-       <div class="btn btn-icon" >
-       <a href="http://localhost:3000/proteinC"> <i class="fa fa-apple" style="font-size:24px"></i></a>
+   
+     
+       
+          <%= link_to proteinC_url, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-heart"></span>
+      
+    <% end %>
+    
 
-        </div>
+</div>
+
+    <div class="rotater">
+     
+         
+             <%= link_to home1_about_url, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-copyright-mark"></span>
+      
+    <% end %>
+      
+    
 
     
-    </div>
-    <div class="rotater">
-      <div class="btn btn-icon" >
-       <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>  </a>
-       
-       
     
-      </div>
     </div>
+    
+    
     <div class="rotater">
       <div class="btn btn-icon">
-        <a href="http://localhost:3000/home1/about/"><i class="fa fa-copyright" aria-hidden="true"></i></a>
-
+          <a href="https://www.facebook.com"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>  </a>
+        
+     
+           
       </div>
     </div>
-    <div class="rotater">
-      <div class="btn btn-icon" >
 
-       <a href="http://localhost:3000/customersps"><i class="fa fa-history" aria-hidden="true"></i></a>
+<div class="rotater">
+    
+      
+       
+       <%= link_to customersps_path, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-time"></span>
 
-      </div>
-    </div>
-    <div class="rotater">
-      <div class="btn btn-icon">
-       <a href="http://localhost:3000/payments/searchingName"><i class="glyphicon glyphicon-euro" aria-hidden="true"></i></a>
-      </div>
-    </div>
-    <div class="rotater">
-      <div class="btn btn-icon">
-      <a href="http://localhost:3000/fat"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
-      </div>
+<% end %>
+       
 
     </div>
+    
+
     <div class="rotater">
-      <div class="btn btn-icon">
-          <a href="http://localhost:3000/homevd/index"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-      </div>
+
+            
+       <%= link_to payments_searchingName_url, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-euro"></span>
+      
+    <% end %>
+    
+    
     </div>
+    
+
+
     <div class="rotater">
-      <div class="btn btn-icon">
-  <a href="http://localhost:3000/graphs/"><i class="fa fa-line-chart" aria-hidden="true"></i> </a>
-      </div>
+         <%= link_to fat_url, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-cutlery"></span>
+      
+    <% end %>
+      
+     
+
     </div>
-  </div>
+    
+    <div class="rotater">
+      
+     
+         <%= link_to cart_path, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+      
+    <% end %>
+    
+         
+  
+    </div>
+    
+    <div class="rotater">
+      
+        <%= link_to graphs_url, class: "btn btn-icon " do %>
+        <span class="glyphicon glyphicon-stats"></span>
+   
+   <% end %>
+      </div>
+   </div>
+
 </div>
 </body>
 </html>

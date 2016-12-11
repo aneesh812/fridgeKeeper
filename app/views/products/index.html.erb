@@ -1,66 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-div.background {
-  background: url(http://media.gettyimages.com/videos/jackolantern-on-a-dark-background-video-id608980182?s=640x640) repeat;
-  border: 1px solid black;
-}
-div.transbox {
-  margin: 15px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-div.transbox p {
-  height: 0px;
-    width: 10%;
-  margin: 10%;
-  font-weight: bold;
-  color: #000000;
- 
-}
-body {
-    background-image: url("http://images.all-free-download.com/images/graphiclarge/retro_texture_background_hd_pictures_165809.jpg");
-}
-</style>
 
-</head>
+<body background="http://www.magic4walls.com/wp-content/uploads/2013/11/food-berry-cherry-cherry-background-wallpaper-widescreen-fullscreen-widescreen-HD-wallpapers-background-wallpaper-widescreen-fullscreen-widescreen.jpg">
+<button type="button" class="btn btn-primary btn-lg">
+  
+   <a <%= link_to 'Cart', cart_path %>
 
+<span class="glyphicon glyphicon-plus"></span> 
+</button>
+     </a>
+<button type="button" class="btn btn-primary btn-lg">
+ <a <%= link_to 'Payments', payments_url %>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Online Grocery Store</h1>
-    
-  </div>
-</div>
+<span class="glyphicon glyphicon-phone"></span>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><font color="white">FridgeKeeper</font></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost:3000/"><font color="Red">Home</font></a></li>
-        <li><a href="http://localhost:3000/products"><font color="Red">Products</font></a></li>
-        <li><a href="#"><font color="Red">Deals</font></a></li>
-        <li><a href="#"><font color="Red">Stores</font></a></li>
-        <li><a href="#"><font color="Red">Contact</font></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://localhost:3000/users/sign_in"><span class="glyphicon glyphicon-user"></span><font color="Red"> Your Account</font></a></li>
-        <li><a href="http://localhost:3000/cart/"><span class="glyphicon glyphicon-shopping-cart"></span><font color="Red"> Cart</font></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+     </a>
+</button>
 
 
 <div class="background">
@@ -78,7 +31,7 @@ body {
       <%= render "product_row", product: product, order_item: @order_item %>
     <% end %>
 </br>
-    <center><a href="http://localhost:3000/cart/" class="btn btn-info" role="button"><font color="Red">Go To Cart !</font></a></center>
+    <center><a  <%= link_to 'Shopping Cart', cart_path %> </a></center>
 
   </div>
 </div>
