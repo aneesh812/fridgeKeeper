@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'currencyConv','~> 0.0.0'
 
 #by shuaib
 gem 'BMRcal', '~> 0.0.0'

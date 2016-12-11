@@ -1,0 +1,6 @@
+A new payment requested: nil
+A new payment requested: hhhhhhh
+A new payment requested: #<Payment id: nil, first_name: "vvv", last_name: "vvvvvv", last4: nil, amount: #<BigDecimal:7fcc0c9d5190,'0.2E5',9(18)>, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "", last_name: "", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
+A new payment requested: #<Payment id: nil, first_name: "hgfh", last_name: "jgjkg", last4: nil, amount: nil, success: nil, authorization_code: nil, created_at: nil, updated_at: nil>
